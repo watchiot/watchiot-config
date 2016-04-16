@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/watchiot/watchiot-repo.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo)
+
 # watchiot-config
 Repository of predefined configurations
 
