@@ -5,3 +5,7 @@ node_js:
   - "4.4.3"
 jdk:
   - oraclejdk8
+  
+addons:
+    code_climate:
+        repo_token: d83bc17fe7801a6a898d1fad8a5388c80f1212dbc0b30a66c905d94d42cb5a94
