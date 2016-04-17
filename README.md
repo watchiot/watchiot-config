@@ -9,7 +9,6 @@ Inside the repo folder
 
 --
 - repos.json (with the name of the all folders configuratinos)
-- folder for the new configuration
 
 -- 
 inside the each folder
