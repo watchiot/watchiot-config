@@ -13,7 +13,7 @@ Inside the repo folder
 -- 
 inside the each folder
 - repo.json (with the title: abstract: svg file: installer: {java: java/mymonitor.jar, pyton: python/mymonitor.py})
-- svg of the configuration
-- config.yaml(template of the configuration)
+- config.yaml (Template of the configuration.)
 - readme.md (Details how it can use, more descriptions.)
+- image svg 
 - installers (java/mymonitor.jar, python/mymonitor.py, tec)
