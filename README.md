@@ -1,15 +1,18 @@
 [![Build Status](https://travis-ci.org/watchiot/watchiot-repo.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-repo/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-repo)
 
 # watchiot-config
-Repository of predefined configurations
+Repository of predefine configurations
 
-This project group all the predefined configurtations
+This project group all the predefine configurtations
 
-Inside the config folder
+Inside the repo folder
+
 --
-
-- Name of the configuration (folder name). it is going to be user like title 
+- repos.json (with the name of the all folders configuratinos)
+- folder for the new configuration
+-- inside the each folder
+- repo.json (with the title: yml template: svg file: readme: installer: {java: java/mymonitor.jar, pyton: python/mymonitor.py})
 - Svg of the configuration
-- Yaml of the configuration template
-- each folder for installer tecnologic [java, ruby, paython, etc]
-  - inside the each folder, the installer [ruby/my-monitor.rb, java/my-monitor.jar, python/my-monitor.tar.gz, etc] file plus a readme.md abount how installer and use   
+- Yaml template of the configuration
+- readme.md
+- installers
