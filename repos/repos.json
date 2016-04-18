@@ -1,5 +1,6 @@
 {
   "repos": [
-    "monitor_hd"
+    "monitor_hd",
+    "monitor_mem"
   ]
 }
