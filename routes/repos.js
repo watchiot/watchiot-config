@@ -15,19 +15,21 @@ router.get('/', function(req, res, next) {
   res.json(lst_repos);
 });
 
-/* router for config.yaml */
+/* router for config.yaml in json */
 for (var index in repos.repos) {
   var repo_folder = repos.repos[index];
   router.get('/' + repo_folder + '/config.yaml', function (req, res, next) {
-    res.send(req.url);
+    yaml = fs.readFileSync(path.resolve('../repos/' + req.url));
+    res.json({'yaml': yaml.toString()});
   });
 }
 
-/* router for readme.md */
+/* router for readme.md in json */
 for (var index in repos.repos) {
   var repo_folder = repos.repos[index];
   router.get('/' + repo_folder + '/readme.md', function (req, res, next) {
-    res.send(req.url);
+    readme = fs.readFileSync(path.resolve('../repos/' + req.url));
+    res.json({'readme': readme.toString()});
   });
 }
 
