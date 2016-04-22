@@ -6,7 +6,7 @@ Repository of configurations
 
 This project group all the predefine configurtations.
 
-## How add a new configuration
+## How contribute and add a new configuration
 
 The project has a *repos* folder. Inside it, you have to add your new configuration folder with the info shown below and send us a pull request.
 
