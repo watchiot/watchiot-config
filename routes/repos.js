@@ -27,7 +27,8 @@ router.get('/', function(req, res, next) {
 for (var i in repos.repos) {
   repo_folder = repos.repos[i];
 
-  /* GET /repos/{repo_name}/{name_image.svg}
+  /*
+   * GET /repos/{repo_name}/{name_image.svg}
    *
    * return: the svg image
    */
