@@ -1,9 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var repos = require('../repos/repos.json');
-var path = require('path');
-var fs = require('fs');
 
+var fs = require('fs');
+var path = require('path');
+
+/* metadata about the repos */
+var repos = require('../repos/repos.json');
+
+/*
+ * GET /repos
+ *
+ * return: A Json the all the repositories
+ */
 router.get('/', function(req, res, next) {
   var lst_repos = {};
   for (var index in repos.repos) {
@@ -15,7 +23,23 @@ router.get('/', function(req, res, next) {
   res.json(lst_repos);
 });
 
-/* router for config.yaml in json */
+/* GET /repos/{repo_name}/{name_image.svg}
+ *
+ * return: the svg image
+ */
+for (var index in repos.repos) {
+  var repo_folder = repos.repos[index];
+  var repo = require('../repos/' + repo_folder + '/repo.json');
+  router.get('/' + repo_folder + '/' + repo.repo.image, function (req, res, next) {
+    res.sendFile(path.resolve('../repos/' + req.url));
+  });
+}
+
+/*
+ * GET /repos/{repo_name}/config.yaml
+ *
+ * return: A Json with the yaml config info
+ */
 for (var index in repos.repos) {
   var repo_folder = repos.repos[index];
   router.get('/' + repo_folder + '/config.yaml', function (req, res, next) {
@@ -24,21 +48,16 @@ for (var index in repos.repos) {
   });
 }
 
-/* router for readme.md in json */
+/*
+ * GET /repos/{repo_name}/readme.md
+ *
+ * return: A Json with the readme.md config info
+ */
 for (var index in repos.repos) {
   var repo_folder = repos.repos[index];
   router.get('/' + repo_folder + '/readme.md', function (req, res, next) {
     readme = fs.readFileSync(path.resolve('../repos/' + req.url));
     res.json({'readme': readme.toString()});
-  });
-}
-
- /* router for svg */
-for (var index in repos.repos) {
-  var repo_folder = repos.repos[index];
-  var repo = require('../repos/' + repo_folder + '/repo.json');
-  router.get('/' + repo_folder + '/' + repo.repo.image, function (req, res, next) {
-    res.sendFile(path.resolve('../repos/' + req.url));
   });
 }
 
