@@ -14,47 +14,43 @@ var repos = require('../repos/repos.json');
  */
 router.get('/', function(req, res, next) {
   var lst_repos = {};
-  for (var index in repos.repos) {
-    var repo_folder = repos.repos[index];
-    var repo = require('../repos/' + repo_folder + '/repo.json');
+  for (var i in repos.repos) {
+    repo_folder = repos.repos[i];
+    repo = require('../repos/' + repo_folder + '/repo.json');
     lst_repos[repo_folder] = repo.repo;
   }
 
   res.json(lst_repos);
 });
 
-/* GET /repos/{repo_name}/{name_image.svg}
- *
- * return: the svg image
- */
-for (var index in repos.repos) {
-  var repo_folder = repos.repos[index];
-  var repo = require('../repos/' + repo_folder + '/repo.json');
+
+for (var i in repos.repos) {
+  repo_folder = repos.repos[i];
+
+  /* GET /repos/{repo_name}/{name_image.svg}
+   *
+   * return: the svg image
+   */
+  repo = require('../repos/' + repo_folder + '/repo.json');
   router.get('/' + repo_folder + '/' + repo.repo.image, function (req, res, next) {
     res.sendFile(path.resolve('../repos/' + req.url));
   });
-}
 
-/*
- * GET /repos/{repo_name}/config.yaml
- *
- * return: A Json with the yaml config info
- */
-for (var index in repos.repos) {
-  var repo_folder = repos.repos[index];
+  /*
+   * GET /repos/{repo_name}/config.yaml
+   *
+   * return: A Json with the yaml config info
+   */
   router.get('/' + repo_folder + '/config.yaml', function (req, res, next) {
     yaml = fs.readFileSync(path.resolve('../repos/' + req.url));
     res.json({'yaml': yaml.toString()});
   });
-}
 
-/*
- * GET /repos/{repo_name}/readme.md
- *
- * return: A Json with the readme.md config info
- */
-for (var index in repos.repos) {
-  var repo_folder = repos.repos[index];
+  /*
+   * GET /repos/{repo_name}/readme.md
+   *
+   * return: A Json with the readme.md config info
+   */
   router.get('/' + repo_folder + '/readme.md', function (req, res, next) {
     readme = fs.readFileSync(path.resolve('../repos/' + req.url));
     res.json({'readme': readme.toString()});
