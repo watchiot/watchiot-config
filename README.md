@@ -11,7 +11,7 @@ This project group all the predefine configurtations.
 The project has a *repos* folder. Inside it, you have to add your new configuration folder with the info shown below and send us a pull request.
 
 -- 
-- Your configuration folder (the name can not has spaces, only alphanumeric characters and underscope )
+- Your configuration folder (the name has to be only alphanumeric characters and underscope)
 - Inside your configuration folder
   - repo.json (title, abstract, svg file path)
   - config.yaml (Template of the configuration.)
@@ -21,3 +21,6 @@ The project has a *repos* folder. Inside it, you have to add your new configurat
 --
 - if your configuration PR is merge. We are going to set in repos.json the name of the your configuration folder
  
+For see an [example]
+
+[example]: <https://github.com/watchiot/watchiot-repo/edit/master/repos/monitor_hd>
