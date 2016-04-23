@@ -42,6 +42,6 @@ http://repo.watchiot.org/repos/monitor_hd/config.yaml
 {"yaml":"params:\n    server_name: string\n    partition_name: string\n    total_space: integer\n    free_space: integer\n    use_space: integer\n    use_percet_space: integer\n    free_percent_space: integer\n\ncritical:\n    when: (server_name == \"my_server1\" and free_space < 2) or (server_name == \"my_server2\" and free_space <= 7)\n    repeat: 20\n    email:\n        tpl: You have the partition ${name} with ${free_percent_space} percent free"}
 ```
 
-For see an [example] of configuration repository
+See an [example] of configuration repository
 
 [example]: <https://github.com/watchiot/watchiot-repo/edit/master/repos/monitor_hd>
