@@ -49,7 +49,7 @@ The project has a *repos* folder. Inside it, you have to add your new configurat
   - svg image  
 
 - if your configuration PR is merge. We are going to add into the file *repos.json* the name of your configuration folder.
-- 
+
 ## License
 
 (The MIT License)
@@ -75,4 +75,3 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**[⬆ back to top]**
