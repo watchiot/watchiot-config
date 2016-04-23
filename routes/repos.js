@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 var fs = require('fs');
-var path = require('path');
 
 /* metadata about the repos */
 var repos = require('../repos/repos.json');
