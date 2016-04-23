@@ -43,7 +43,7 @@ for (var i in repos.repos) {
    * return: A Json with the yaml config info
    */
   router.get('/' + repo_folder + '/config.yaml', function (req, res, next) {
-    yaml = fs.readFileSync(path.resolve('../repos/' + req.url));
+    yaml = fs.readFileSync(__dirname + '/../repos' + req.url);
     res.json({'yaml': yaml.toString()});
   });
 
@@ -53,7 +53,7 @@ for (var i in repos.repos) {
    * return: A Json with the readme.md config info
    */
   router.get('/' + repo_folder + '/readme.md', function (req, res, next) {
-    readme = fs.readFileSync(path.resolve('../repos/' + req.url));
+    readme = fs.readFileSync(__dirname + '/../repos' + req.url);
     res.json({'readme': readme.toString()});
   });
 }
