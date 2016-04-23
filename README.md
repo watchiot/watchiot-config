@@ -6,22 +6,8 @@ Repository of configurations
 
 This project group all the predefine configurtations.
 
-## How contribute and add a new configuration
+## Introduction
 
-The project has a *repos* folder. Inside it, you have to add your new configuration folder with the info shown below and send us a pull request.
-
--- 
-- Your configuration folder (the name has to be only alphanumeric characters and underscope)
-- Inside your configuration folder
-  - repo.json (title, abstract, svg file path)
-  - config.yaml (Template of the configuration.)
-  - readme.md (Details how it can use, more descriptions.)
-  - svg image  
-
---
-- if your configuration PR is merge. We are going to add into the file *repos.json* the name of your configuration folder
- 
---
 You can see the json response used by watchiot site
 
 List of all repository configurations
@@ -48,3 +34,18 @@ http://repo.watchiot.org/repos/monitor_hd/readme.md
 See an [example] of configuration repository
 
 [example]: <https://github.com/watchiot/watchiot-repo/edit/master/repos/monitor_hd>
+
+## Contributing
+
+The project has a *repos* folder. Inside it, you have to add your new configuration folder with the info shown below and send us a pull request.
+
+-- 
+- Your configuration folder (the name has to be only alphanumeric characters and underscope)
+- Inside your configuration folder
+  - repo.json (title, abstract, svg file path)
+  - config.yaml (Template of the configuration.)
+  - readme.md (Details how it can use, more descriptions.)
+  - svg image  
+
+--
+- if your configuration PR is merge. We are going to add into the file *repos.json* the name of your configuration folder.
