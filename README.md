@@ -24,22 +24,25 @@ The project has a *repos* folder. Inside it, you have to add your new configurat
 --
 You can see the json response used by watchiot site
 
+List of all repository configurations
 http://repo.watchiot.org/repos
 
 ```
 {"monitor_hd":{"title":"HD Monitor","abstract":"Hard drive monitor","image":"hd.svg"},"monitor_mem":{"title":"Memory Monitor","abstract":"Memory monitor","image":"mem.svg"}}
 ```
 
-http://repo.watchiot.org/repos/monitor_hd/readme.md
-
-```
-{"readme":"# Hard Driver Monitor\n\nThis configuration monitor the hard drivers on linux OS.\n\n  - Donwload the installer file on [GitHub]\n  \n  ```\n  $ gem install wiot-hdmonitor\n  $ wiot-hdmonitor run\n  ```\n\n[github]: <https://github.com/gorums/wiot-hdmonitor>\n"}
-```
-
+The config.yaml of the monitor_hd configuration
 http://repo.watchiot.org/repos/monitor_hd/config.yaml
 
 ```
 {"yaml":"params:\n    server_name: string\n    partition_name: string\n    total_space: integer\n    free_space: integer\n    use_space: integer\n    use_percet_space: integer\n    free_percent_space: integer\n\ncritical:\n    when: (server_name == \"my_server1\" and free_space < 2) or (server_name == \"my_server2\" and free_space <= 7)\n    repeat: 20\n    email:\n        tpl: You have the partition ${name} with ${free_percent_space} percent free"}
+```
+
+The readme.md of the monitor_hd configuration
+http://repo.watchiot.org/repos/monitor_hd/readme.md
+
+```
+{"readme":"# Hard Driver Monitor\n\nThis configuration monitor the hard drivers on linux OS.\n\n  - Donwload the installer file on [GitHub]\n  \n  ```\n  $ gem install wiot-hdmonitor\n  $ wiot-hdmonitor run\n  ```\n\n[github]: <https://github.com/gorums/wiot-hdmonitor>\n"}
 ```
 
 See an [example] of configuration repository
