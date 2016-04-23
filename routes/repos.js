@@ -26,6 +26,7 @@ router.get('/', function(req, res, next) {
 
 for (var i in repos.repos) {
   repo_folder = repos.repos[i];
+  console.log(repo_folder)
 
   /*
    * GET /repos/{repo_name}/{name_image.svg}
@@ -34,7 +35,9 @@ for (var i in repos.repos) {
    */
   repo = require('../repos/' + repo_folder + '/repo.json');
   router.get('/' + repo_folder + '/' + repo.repo.image, function (req, res, next) {
-    res.sendFile(path.resolve('../repos/' + req.url));
+    p = path.resolve('../repos/' + req.url)
+    console.log(p)
+    res.sendFile(p);
   });
 
   /*
