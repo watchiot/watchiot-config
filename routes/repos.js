@@ -37,11 +37,11 @@ for (var i in repos.repos) {
   });
 
   /*
-   * GET /repos/{repo_name}/config.yaml
+   * GET /repos/{repo_name}/config.yml
    *
    * return: A Json with the yaml config info
    */
-  router.get('/' + repo_folder + '/config.yaml', function (req, res, next) {
+  router.get('/' + repo_folder + '/config.yml', function (req, res, next) {
     yaml = fs.readFileSync(__dirname + '/../repos' + req.url);
     res.json({'yaml': yaml.toString()});
   });
