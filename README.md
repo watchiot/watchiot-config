@@ -27,7 +27,7 @@ http://repo.watchiot.org/repos/monitor_hd/config.yml
 {"yml":"params:\n    server_name: string\n    partition_name: string\n    total_space: integer\n    free_space: integer\n    use_space: integer\n    use_percet_space: integer\n    free_percent_space: integer\n\ncritical:\n    when: (server_name == \"my_server1\" and free_space < 2) or (server_name == \"my_server2\" and free_space <= 7)\n    repeat: 20\n    email:\n        tpl: You have the partition ${name} with ${free_percent_space} percent free"}
 ```
 
-Into each configuration folder will be defined a readme.md file with the description on installation process and use.
+Into each configuration folder will be defined a readme.md file with the description on installation process and usage.
 
 We can access to the **monitor_hd**'s *readme.md* file requested the url
 http://repo.watchiot.org/repos/monitor_hd/readme.md
@@ -50,7 +50,7 @@ The project has a *repos* folder. Inside it, you have to add your new configurat
 - Inside your configuration folder
   - repo.json (title, abstract, svg or png file name with the extension and tags)
   - config.yml (configuration parameters. [Click here] for see more details about config.yml)
-  - readme.md (Descriptions how it can install and use)
+  - readme.md (Descriptions how it can install and usage)
   - svg or png image
 
 - if your configuration PR is merge. We are going to add into the file **repos.json** the name of your configuration folder.
