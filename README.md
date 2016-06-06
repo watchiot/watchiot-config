@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/watchiot/watchiot-repo.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-repo/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-repo)
+[![Build Status](https://travis-ci.org/watchiot/watchiot-repo-config.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo-config) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-repo/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-repo)
 
 # Watchiot Repository
 
