@@ -4,7 +4,7 @@
 
 Repository of configurations
 
-This project brings together all predefined configurations and agents.
+This project brings together all predefined Configurations and agents.
 
 ## Introduction
 
