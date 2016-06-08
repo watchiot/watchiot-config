@@ -8,7 +8,12 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var repos = require('./routes/repos');
 
+var helmet = require('helmet');
+
 var app = express();
+
+// Helmet can help protect your app from some well-known web vulnerabilities by setting HTTP headers appropriately.
+app.use(helmet());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
