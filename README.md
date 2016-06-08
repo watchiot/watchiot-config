@@ -55,7 +55,7 @@ The project has a *repos* folder. Inside it, you have to add your new configurat
 
 - if your configuration PR is merge. We are going to add into the file **repos.json** the name of your configuration folder.
 
-[Click here]: <http://doc.watchiot.org/config>
+[Click here]: <http://docs.watchiot.org/#/config/>
 
 ## License
 
