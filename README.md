@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/watchiot/watchiot-repo-config.png?label=ready&title=Ready)](https://waffle.io/watchiot/watchiot-repo-config)
 [![Build Status](https://travis-ci.org/watchiot/watchiot-repo-config.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo-config) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-repo/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-repo)
 
 # Watchiot Repository of Configurations
