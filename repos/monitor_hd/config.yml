@@ -1,4 +1,4 @@
-params:
+metrics:
     os: string                  # operative system
     server_name: string         # hostname + '-' + ip
     partition: string           # partition name '/dev/sda1' or 'label'
