@@ -1,9 +1,9 @@
-[![Stories in Ready](https://badge.waffle.io/watchiot/watchiot-repo-config.png?label=ready&title=Ready)](https://waffle.io/watchiot/watchiot-repo-config)
-[![Build Status](https://travis-ci.org/watchiot/watchiot-repo-config.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo-config) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-repo/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-repo)
+[![Stories in Ready](https://badge.waffle.io/watchiot/watchiot-agent-config.png?label=ready&title=Ready)](https://waffle.io/watchiot/watchiot-agent-config)
+[![Build Status](https://travis-ci.org/watchiot/watchiot-agent-config.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo-config) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-agent/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-agent)
 
-# Watchiot Repository of Configurations
+# Watchiot Repository of Agents
 
-Repository of configurations
+Repository of agents
 
 This project brings together all predefined configurations and agents.
 
@@ -12,7 +12,7 @@ This project brings together all predefined configurations and agents.
 You can see the _json_ response used by **Watchiot** site
 
 List of all repository configurations
-http://repo.watchiot.org/repos
+http://agent.watchiot.org/repos
 
 ```
 {"monitor_hd":{"title":"HD Monitor","abstract":"Hard drive monitor","image":"hd.svg","tags":"hardware"},"monitor_mem":{"title":"Memory Monitor","abstract":"Memory monitor","image":"mem.svg","tags":"hardware"}}
@@ -22,7 +22,7 @@ Into each configuration folder will be defined a config.yml file with the monito
 conditions and ways to notifications
 
 We can access to the **monitor_hd**'s *config.yml* file requested the url
-http://repo.watchiot.org/repos/monitor_hd/config.yml
+http://agent.watchiot.org/repos/monitor_hd/config.yml
 
 ```
 {"yml":"params:\n    server_name: string\n    partition_name: string\n    total_space: integer\n    free_space: integer\n    use_space: integer\n    use_percet_space: integer\n    free_percent_space: integer\n\ncritical:\n    when: (server_name == \"my_server1\" and free_space < 2) or (server_name == \"my_server2\" and free_space <= 7)\n    repeat: 20\n    email:\n        tpl: You have the partition ${name} with ${free_percent_space} percent free"}
@@ -31,7 +31,7 @@ http://repo.watchiot.org/repos/monitor_hd/config.yml
 Into each configuration folder will be defined a readme.md file with the description on installation process and usage.
 
 We can access to the **monitor_hd**'s *readme.md* file requested the url
-http://repo.watchiot.org/repos/monitor_hd/readme.md
+http://agent.watchiot.org/repos/monitor_hd/readme.md
 
 ```
 {"readme":"# Hard Driver Monitor\n\nThis configuration monitor the hard drivers on linux OS.\n\n  - Donwload the installer file on [GitHub]\n  \n  ```\n  $ gem install wiot-hdmonitor\n  $ wiot-hdmonitor run\n  ```\n\n[github]: <https://github.com/gorums/wiot-hdmonitor>\n"}
@@ -39,7 +39,7 @@ http://repo.watchiot.org/repos/monitor_hd/readme.md
 
 See an [example] of configuration repository
 
-[example]: <https://github.com/watchiot/watchiot-repo/edit/master/repos/monitor_hd>
+[example]: <https://github.com/watchiot/watchiot-agent/edit/master/repos/monitor_hd>
 
 ## Contributing
 
