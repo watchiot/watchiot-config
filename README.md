@@ -1,5 +1,5 @@
-[![Stories in Ready](https://badge.waffle.io/watchiot/watchiot-agent-config.png?label=ready&title=Ready)](https://waffle.io/watchiot/watchiot-agent-config)
-[![Build Status](https://travis-ci.org/watchiot/watchiot-agent-config.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-repo-config) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-agent/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-agent)
+[![Stories in Ready](https://badge.waffle.io/watchiot/watchiot-agent.png?label=ready&title=Ready)](https://waffle.io/watchiot/watchiot-agent)
+[![Build Status](https://travis-ci.org/watchiot/watchiot-agent.svg?branch=master)](https://travis-ci.org/watchiot/watchiot-agent) [![Code Climate](https://codeclimate.com/github/watchiot/watchiot-agent/badges/gpa.svg)](https://codeclimate.com/github/watchiot/watchiot-agent)
 
 # Watchiot Repository of Agents
 
@@ -9,7 +9,7 @@ This project brings together all predefined configurations and agents.
 
 ## Introduction
 
-You can see the _json_ response used by **Watchiot** site
+You can see the _json_ response used by **WatchIoT** site
 
 List of all repository configurations
 http://agent.watchiot.org/repos
