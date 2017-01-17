@@ -1,12 +1,14 @@
 metrics:
+    server_name: string         # server name
     mount_point: string         # partition mount point '/' or 'C:'
-    total_space: integer        # partition total space in unit 'TB', 'GB', 'MB', KB, 'B'
-    free_space: integer         # partition free space in unit 'TB', 'GB', 'MB', KB, 'B'
-    use_percet_space: numeric   # partition use in percent '%34,67'
+    total_space: number         # partition total space in unit 'TB', 'GB', 'MB', KB, 'B'
+    free_space: number          # partition free space in unit 'TB', 'GB', 'MB', KB, 'B'
     unit: string                # unit 'TB', 'GB', 'MB', KB, 'B'
 
 critical:
-    when: (server_name == "my_server1" and free_space < 2) or (server_name == "my_server2" and free_space <= 7) # add your condition here
+    when: (server_name === "my_server1" && free_space < 10) || (server_name === "my_server2" && free_space <==  17) # add your condition here
     repeat: 20 # the time in minute wait for send again the notification if the critical condition persist
     email:
         tpl: You have the partition {{name}} with {{free_percent_space}} percent free # the template email send
+
+default: normal
